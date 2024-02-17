@@ -25,9 +25,9 @@
     </style>
   </head>
   <body>
-    <header class="lg:mt-10 lg:mx-32">
+    <header class="lg:mt-10 mx-4 lg:mx-32">
       <nav
-        class="bg-[url(images/banner.png)] w-full min-h-screen bg-no-repeat bg-center"
+        class="bg-[url(images/banner.png)] rounded-2xl w-full min-h-screen bg-no-repeat bg-center"
       >
         <div class="navbar bg-base-100">
           <div class="navbar-start">
@@ -116,34 +116,78 @@
     </header>
     <main>
       <!-- best offer -->
-      <section class="lg:mt-10 lg:mx-32">
-        <h1>Best offers for you</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-2 max-h-48 gap-4">
-          <div
-            class="bg-[url(images/ticket-cupon.png)] rounded-2xl bg-no-repeat bg-center bg-[#ecaa19]"
-          >
-            <div class="flex justify-around">
-              <div class="flex justify-between flex-col">
-                <h1 class="flex-col-reverse text-2xl font-bold">15% OFF</h1>
-                <p class="font-semibold">on your next purchase</p>
-                <p class="font-semibold opacity-60">use by January 2024</p>
+      <section class="mt-0 mx-4 lg:mx-32">
+        <div class="flex flex-col text-center space-y-12">
+          <h1 class="font-bold text-2xl">Best offers for you</h1>
+          <div class="grid grid-cols-1 mt-0 lg:grid-cols-2 lg:min-h-32 gap-4">
+            <div
+              class="bg-[url(images/cupon-devider.png)] p-16 rounded-2xl bg-no-repeat bg-center bg-[#ecaa19]"
+            >
+              <div class="flex justify-between">
+                <div class="flex justify-between flex-col">
+                  <h1 class="flex-col-reverse text-2xl font-extrabold">
+                    15% OFF
+                  </h1>
+                  <p class="font-semibold">on your next purchase</p>
+                  <p class="font-semibold opacity-60">use by January 2024</p>
+                </div>
+                <div class="text-center">
+                  <h2 id="coupon" class="font-bold text-2xl">NEW15</h2>
+                  <p class="font-semibold opacity-60">Coupon Code</p>
+                </div>
               </div>
-              <div class="text-center"><h2 id="coupon" class="font-bold text-2xl">NEW15</h2> <p class="font-semibold opacity-60">Coupon Code</p></div>
+            </div>
+
+            <div
+              class="bg-[url(images/cupon-devider.png)] p-16 rounded-2xl bg-no-repeat bg-center bg-pink-500"
+            >
+              <div class="flex justify-between">
+                <div class="flex justify-between flex-col">
+                  <h1 class="flex-col-reverse text-2xl font-extrabold">
+                    20% OFF
+                  </h1>
+                  <p class="font-semibold">on your next purchase</p>
+                  <p class="font-semibold opacity-60">use by January 2024</p>
+                </div>
+                <div class="text-center">
+                  <h2 id="couple-coupon" class="font-bold text-2xl">
+                    Couple 20
+                  </h2>
+                  <p class="font-semibold opacity-60">Coupon Code</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div
-            class="bg-[url(images/ticket-cupon.png)] bg-no-repeat bg-center bg-pink-500"
-          >
-            afdfdafda
+          <div>
+            <button
+              class="btn mt-6 w-56 border-green-500 font-bold px-8 text-xl"
+            >
+              See All Offers
+            </button>
           </div>
         </div>
-        <!-- <div class="flex ">
-                <div class=""><img class="flex-1" src="images/ticket-cupon.png" alt=""></div>
-                <div class="">
-                    <img src="images/ticket-cupon.png" alt="">
-                </div>
-            </div> -->
+      </section>
+
+      <!-- P.H Poribahan section -->
+
+      <section class="lg:mt-24 mt-12 rounded-t-3xl bg-slate-200 border-green-600 border-2">
+        <div class="mt-16">
+          <h1>P.H Paribahan</h1>
+          <p>
+            Passengers usually pay a fare to ride the bus, which can vary
+            depending on factors such as distance traveled, time of day, and
+            passenger category (e.g., adult, child, senior). Fares may be paid
+            in cash or through various fare payment methods like smart cards or
+            mobile apps.
+          </p>
+          <div class="bg-white mx-4 lg:mx-32 rounded-2xl grid grid-cols-3">
+            <div></div>
+            <div><img src="images/info-devider.png" alt=""></div>
+            <div>
+                <img src="images/fare.png" alt="">
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer></footer>
