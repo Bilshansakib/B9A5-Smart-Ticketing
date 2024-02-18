@@ -12,6 +12,7 @@ const allBtn = document.getElementsByClassName("add-btn");
 
 for (const btn of allBtn) {
     btn.addEventListener("click",function(event){
+        btn.style.backgroundColor = "#1dd100";
         seatLeft = seatLeft - 1 ;
         if (seatLeft < 36){
             alert ("Can't buy more then 4 tickets")
@@ -19,8 +20,10 @@ for (const btn of allBtn) {
         
         count = count + 1;
 
-        
         const seatName = event.target.parentNode.childNodes[1].innerText;
+        // const seatName = event.target.parentNode.parentNode.parentNode.childNodes.childNodes[0].innerText
+        console.log(seatName)
+        
 
         const selectedContainer = document.getElementById(
             "selected-place-container"
@@ -42,7 +45,8 @@ for (const btn of allBtn) {
 
 
        totalPrice("total-cost",price);
-       event.target.parentNode.style.color = "#1dd100";
+       event.target.parentNode.style.color = "bg-[#1dd100]";
+        
 
 
        totalPrice("grand-total", price)
@@ -51,16 +55,12 @@ for (const btn of allBtn) {
 
         setInnerText("seats-left",seatLeft)
         setInnerText("seat-count",count);
-
-
-    })
-}
-
-const couponBtn = document.getElementById("apply-btn");
-couponBtn.addEventListener("click", function(){
+        const couponBtn = document.getElementById("apply-btn");
+        couponBtn.addEventListener("click", function(){
     const convertTotal = getValue("total-cost");
     const couponElement = document.getElementById("input-field").value;
     const couponCode = couponElement.split(" ").join("").toUpperCase();
+    
     if (couponCode === "NEW15") {
         setInnerText("grand-total",convertTotal - convertTotal * 0.15)
         
@@ -72,6 +72,28 @@ couponBtn.addEventListener("click", function(){
     }
 
 })
+
+
+    })
+}
+
+// const couponBtn = document.getElementById("apply-btn");
+// couponBtn.addEventListener("click", function(){
+//     const convertTotal = getValue("total-cost");
+//     const couponElement = document.getElementById("input-field").value;
+//     const couponCode = couponElement.split(" ").join("").toUpperCase();
+    
+//     if (couponCode === "NEW15") {
+//         setInnerText("grand-total",convertTotal - convertTotal * 0.15)
+        
+
+//     }else if (couponCode === "Couple20") {
+//         setInnerText("grand-total",convertTotal - convertTotal * 0.20)
+//     } else {
+//         alert("Invalid Coupon")
+//     }
+
+// })
 
 
 
@@ -90,4 +112,13 @@ function totalPrice(id, value) {
 }
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
+}
+
+function hideElement(id) {
+    const element = document.getElementById(id);
+    element.classList.add('hidden')
+}
+function showElement(id) {
+    const element = document.getElementById(id);
+    element.classList.remove('hidden')
 }
