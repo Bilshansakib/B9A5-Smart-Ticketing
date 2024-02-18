@@ -361,7 +361,7 @@
 
           <!-- seat calculation -->
           <div class="flex-1 text-center p-2">
-            <div id="cart-container" class="cart">
+            <div id="cart-container" class="cart bg-slate-200 p-4 rounded-xl">
               <h1 class="text-xl font-bold">Select Your Seat</h1>
               <hr />
               <div class="flex justify-around">
@@ -420,7 +420,30 @@
               </h4>
             </div>
             <!--  -->
-            <button class="btn font-extrabold text-2xl mt-4 w-3/4 bg-" onclick="my_modal_4.showModal()">Next</button>
+            <div class="flex flex-col items-center">
+                <label class="form-control  max-w-xs text-xl mt-4 w-full">
+                    <div class="label">
+                      <span class="label-text">Passenger name*</span>
+                    </div>
+                    <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" />
+                </label>
+                <label class="form-control  max-w-xs text-xl mt-4 w-full">
+                    <div class="label">
+                      <span class="label-text">Phone number*</span>
+                    </div>
+                    <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+                </label>
+                <label class="form-control  max-w-xs text-xl mt-4 w-full">
+                    <div class="label">
+                      <span class="label-text">Email ID</span>
+                    </div>
+                    <input type="text" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
+                </label>
+
+            </div>
+
+            <!--  -->
+            <button class="btn font-extrabold text-xl mt-4 w-3/4  bg-[#1dd100] text-white" onclick="my_modal_4.showModal()">Next</button>
             <dialog id="my_modal_4" class="modal text-center">
               <div
                 class="modal-box w-11/12 max-w-2xl flex flex-col space-y-2 items-center"
@@ -438,8 +461,7 @@
                 </p>
                 <div class="">
                   <form method="dialog">
-                    <!-- if there is a button, it will close the modal -->
-                    <button class="btn ">Continue</button>
+                    <button class="btn  bg-[#1dd100] text-white">Continue</button>
                   </form>
                 </div>
               </div>
@@ -449,7 +471,6 @@
       </section>
     </main>
     <footer>
-      <!-- You can open the modal using ID.showModal() method -->
     </footer>
 
     <script src="JS/utility.js"></script>
