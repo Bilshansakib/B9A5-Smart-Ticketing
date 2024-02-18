@@ -25,7 +25,7 @@
     </style>
   </head>
   <body>
-    <header class="lg:mt-10 mx-4 lg:mx-32">
+    <header id="header-section" class="lg:mt-10 mx-4 lg:mx-32">
       <nav
         class="bg-[url(images/banner.png)] rounded-2xl w-full min-h-screen bg-no-repeat bg-center"
       >
@@ -106,7 +106,10 @@
               as a city, town, or region. Here are some common aspects of bus
               service.
             </p>
-            <button class="btn bg-[#1DD100] text-black border-none px-8">
+            <button
+              onclick="moveSection()"
+              class="btn bg-[#1DD100] text-black border-none px-8"
+            >
               Buy Tickets
             </button>
           </div>
@@ -171,6 +174,7 @@
       <!-- P.H Poribahan section -->
 
       <section
+        id="paribahan-section"
         class="lg:mt-24 mt-12 rounded-t-3xl bg-slate-200 border-green-600 border-2"
       >
         <div class="mt-16 font-bold space-y-6">
@@ -202,7 +206,7 @@
                 <!-- seats -->
                 <div
                   class="bg-slate-200 p-1 rounded-xl w-36 text-center items-center flex gap-2"
-                > 
+                >
                   <img src="images/seat-green.png" alt="" /><span
                     class="spacial-color font-bold"
                     ><span id="seats-left">40</span> Seats left</span
@@ -244,6 +248,125 @@
               <!-- fare -->
               <h1 id="fare" class="text-2xl font-extrabold">550 Taka</h1>
               <p class="font-bold text-xl opacity-60">Per seat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-around bg-white mx-4 lg:mx-32 rounded-2xl">
+          <div class="flex-1">
+            <div class=" p-2">
+              <h2 class="text-xl font-bold">Select your seat</h2>
+              <hr />
+              <div class="flex justify-between">
+                <div>
+                  <img src="images/seat-gray.png" alt="seat-gray" />
+                  <p>Available</p>
+                </div>
+                <div class="flex">
+                  <img
+                    src="images/seat-green-filled.png"
+                    alt="seat-green-filled"
+                  />
+                  <p class="font-bold spacial-color">Selected</p>
+                </div>
+              </div>
+              <hr class="hover:selection:" />
+              <div class="flex justify-end">
+                <img
+                  class="border-2 px-8 bg-gray-400"
+                  src="images/steering.png"
+                  alt="steering"
+                />
+              </div>
+            </div>
+            <!-- grid seat-->
+            <div class="flex justify-around">
+              <div class="grid grid-cols-7 space-x-4">
+                <div class="flex flex-col col-span-1 justify-center gap-1">
+                  <button class="kbd">A</button>
+                  <button class="kbd">B</button>
+                  <button class="kbd">D</button>
+                  <button class="kbd">E</button>
+                </div>
+                <div class="flex col-span-3 gap-2">
+                  <div
+                    class="flex flex-col col-span-2 justify-center gap-1 my-1 w-full"
+                  >
+                    <button class="add-btn kbd px-6">A1</button>
+                    <button class="add-btn kbd">B1</button>
+                    <button class="add-btn kbd">C1</button>
+                    <button class="add-btn kbd">D1</button>
+                  </div>
+                  <div class="flex flex-col justify-center gap-1 my-1 w-full">
+                    <button class="add-btn kbd px-6">A1</button>
+                    <button class="add-btn kbd">B1</button>
+                    <button class="add-btn kbd">C1</button>
+                    <button class="add-btn kbd">D1</button>
+                  </div>
+                </div>
+                <div class="flex col-span-3 gap-2">
+                  <div
+                    class="flex flex-col col-span-2 justify-center gap-1 my-1 w-full"
+                  >
+                    <button class="add-btn kbd px-6">A3</button>
+                    <button class="add-btn kbd">B3</button>
+                    <button class="add-btn kbd">C3</button>
+                    <button class="add-btn kbd">D4</button>
+                  </div>
+                  <div
+                    class="flex flex-col col-span-2 justify-center gap-1 my-1 w-full"
+                  >
+                    <button class="add-btn kbd px-6">A1</button>
+                    <button class="add-btn kbd">B2</button>
+                    <button class="add-btn kbd">C3</button>
+                    <button class="add-btn kbd">D4</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- seat calculation -->
+          <div class="flex-1 text-center p-2">
+            <div id="cart-container" class="cart">
+              <h1 class="text-xl font-bold">Select Your Seat</h1>
+              <hr />
+              <div class="flex justify-around">
+                <ul
+                  id="selected-place-container"
+                  class="selected-place-container"
+                >
+                  <h1 class="font-extrabold">
+                    Seats
+                    <span id="seat-count" class="bg-[#1dd100] px-1">0</span>
+                  </h1>
+                </ul>
+                <ul
+                  id="selected-place-container"
+                  class="selected-place-container"
+                ><h1 class="font-extrabold">Class</h1></ul>
+                <ul
+                  id="selected-place-container"
+                  class="selected-place-container"
+                ><h1 class="font-extrabold">Price</h1></ul>
+              </div>
+              <hr />
+              <div class="calculation-area flex justify-between">
+                <!-- total Price -->
+                <h4 class="flex">
+                  <span>Total Price:</span>
+                  <span>BDT <span id="total-cost">0</span></span>
+                </h4>
+              </div>
+              <div class="all-cat-btn">
+                <button onclick="grandTotal('train')" class="category-btn">
+                  Train -200
+                </button>
+              </div>
+              <hr />
+              <h4>
+                Grand Total : <span>BDT <span id="grand-total">0</span></span>
+              </h4>
             </div>
           </div>
         </div>
