@@ -22,6 +22,7 @@
       .spacial-color {
         color: #1dd100;
       }
+      
     </style>
   </head>
   <body>
@@ -246,7 +247,9 @@
             <div class="items-center space-y-4">
               <img class="text-center" src="images/fare.png" alt="fare" />
               <!-- fare -->
-              <h1 id="fare" class="text-2xl font-extrabold">550 Taka</h1>
+              <h1 id="per-fare" class="text-2xl font-extrabold">
+                <span id="fare">550</span> Taka
+              </h1>
               <p class="font-bold text-xl opacity-60">Per seat</p>
             </div>
           </div>
@@ -254,7 +257,7 @@
 
         <div class="flex justify-around bg-white mx-4 lg:mx-32 rounded-2xl">
           <div class="flex-1">
-            <div class=" p-2">
+            <div class="p-2">
               <h2 class="text-xl font-bold">Select your seat</h2>
               <hr />
               <div class="flex justify-between">
@@ -344,27 +347,32 @@
                 <ul
                   id="selected-place-container"
                   class="selected-place-container"
-                ><h1 class="font-extrabold">Class</h1></ul>
+                >
+                  <h1 class="font-extrabold">Class</h1>
+                  <li>Economy</li>
+                  <li>''</li>
+                </ul>
                 <ul
-                  id="selected-place-container"
-                  class="selected-place-container"
-                ><h1 class="font-extrabold">Price</h1></ul>
+                  id="selected-price-container"
+                  class="selected-price-container"
+                >
+                  <h1 class="font-extrabold">Price</h1>
+                </ul>
               </div>
               <hr />
-              <div class="calculation-area flex justify-between">
+              <div class="calculation-area flex justify-center ">
                 <!-- total Price -->
-                <h4 class="flex">
-                  <span>Total Price:</span>
-                  <span>BDT <span id="total-cost">0</span></span>
+                <h4 class="border-2 space-x-32">
+                  <span class="font-bold">Total Price:</span>
+                  <span class="font-bold">BDT <span id="total-cost">0</span></span>
                 </h4>
               </div>
               <div class="all-cat-btn">
-                <button onclick="grandTotal('train')" class="category-btn">
-                  Train -200
-                </button>
+                <input id="input-field" class="input input-bordered join-item " type="text" placeholder="Have any coupon?">
+                <button id="apply-btn" class="btn join-item rounded-md bg-[#1dd100] text-white font-bold">Apply</button>
               </div>
               <hr />
-              <h4>
+              <h4 class="text-center">
                 Grand Total : <span>BDT <span id="grand-total">0</span></span>
               </h4>
             </div>
