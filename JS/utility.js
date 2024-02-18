@@ -62,9 +62,10 @@ couponBtn.addEventListener("click", function(){
     const couponElement = document.getElementById("input-field").value;
     const couponCode = couponElement.split(" ").join("").toUpperCase();
     if (couponCode === "NEW15") {
-        setInnerText("grand-total", convertTotal - convertTotal * 0.15)
+        setInnerText("grand-total",convertTotal - convertTotal * 0.15)
+        
 
-    } else if (couponCode === "Couple 20") {
+    }else if (couponCode === "Couple20") {
         setInnerText("grand-total",convertTotal - convertTotal * 0.20)
     } else {
         alert("Invalid Coupon")
@@ -73,19 +74,6 @@ couponBtn.addEventListener("click", function(){
 })
 
 
-
-
-// function grandTotal(category) {
-//     console.log(category);
-//     const convertTotal = getValue("total-cost");
-//     if (category == "bus") {
-//       setInnerText("grand-total", convertTotal + 100);
-//     } else if (category == "train") {
-//       setInnerText("grand-total", convertTotal - 200);
-//     } else {
-//       setInnerText("grand-total", convertTotal);
-//     }
-// }
 
 function getValue(id) {
   const budgetInnerText = document.getElementById(id).innerText;
@@ -98,7 +86,7 @@ function totalPrice(id, value) {
     const totalCost = document.getElementById("total-cost").innerText;
     const total = parseInt(totalCost) + parseInt(value);
     document.getElementById("total-cost").innerText = total;
-    grandTotal("other");
+
 }
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;

@@ -260,12 +260,12 @@
             <div class="p-2">
               <h2 class="text-xl font-bold">Select your seat</h2>
               <hr />
-              <div class="flex justify-between">
-                <div>
+              <div class="flex justify-around">
+                <div class="flex gap-2">
                   <img src="images/seat-gray.png" alt="seat-gray" />
-                  <p>Available</p>
+                  <p class="font-bold">Available</p>
                 </div>
-                <div class="flex">
+                <div class="flex gap-2">
                   <img
                     src="images/seat-green-filled.png"
                     alt="seat-green-filled"
@@ -274,9 +274,10 @@
                 </div>
               </div>
               <hr class="hover:selection:" />
-              <div class="flex justify-end">
+              <div class="flex justify-around">
+                <p></p>
                 <img
-                  class="border-2 px-8 bg-gray-400"
+                  class="border-2 px-8 rounded-xl py-1 bg-gray-400"
                   src="images/steering.png"
                   alt="steering"
                 />
@@ -295,7 +296,7 @@
                   <div
                     class="flex flex-col col-span-2 justify-center gap-1 my-1 w-full"
                   >
-                    <button class="add-btn kbd px-6">A1</button>
+                    <button class="add-btn bg-slate-300 rounded-xl  py-1 px-6">A1</button>
                     <button class="add-btn kbd">B1</button>
                     <button class="add-btn kbd">C1</button>
                     <button class="add-btn kbd">D1</button>
