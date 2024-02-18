@@ -114,11 +114,18 @@ function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
 
-function hideElement(id) {
-    const element = document.getElementById(id);
-    element.classList.add('hidden')
-}
-function showElement(id) {
-    const element = document.getElementById(id);
-    element.classList.remove('hidden')
+// function hideElement(id) {
+//     const element = document.getElementById(id);
+//     element.classList.add('hidden')
+// }
+// hideElement()
+// function showElement(id) {
+//     const element = document.getElementById(id);
+//     element.classList.remove('hidden')
+// }
+// showElement("next")
+
+function hide(){
+    const hideNext = document.getElementById('next')
+    hideNext.classList.add('hidden')
 }

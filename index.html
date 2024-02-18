@@ -431,7 +431,7 @@
                     <div class="label">
                       <span class="label-text">Phone number*</span>
                     </div>
-                    <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+                    <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
                 </label>
                 <label class="form-control  max-w-xs text-xl mt-4 w-full">
                     <div class="label">
@@ -443,7 +443,7 @@
             </div>
 
             <!--  -->
-            <button class="btn font-extrabold text-xl mt-4 w-3/4  bg-[#1dd100] text-white" onclick="my_modal_4.showModal()">Next</button>
+            <button id="next" class="btn font-extrabold text-xl mt-4 w-3/4 bg-[#1dd100] text-white"  onclick="my_modal_4.showModal(),hide() ">Next</button>
             <dialog id="my_modal_4" class="modal text-center">
               <div
                 class="modal-box w-11/12 max-w-2xl flex flex-col space-y-2 items-center"
