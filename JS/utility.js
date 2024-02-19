@@ -75,51 +75,26 @@ for (const btn of allBtn) {
     })
 }
 
-// const couponBtn = document.getElementById("apply-btn");
-// couponBtn.addEventListener("click", function(){
-//     const convertTotal = getValue("total-cost");
-//     const couponElement = document.getElementById("input-field").value;
-//     const couponCode = couponElement.split(" ").join("").toUpperCase();
-    
-//     if (couponCode === "NEW15") {
-//         setInnerText("grand-total",convertTotal - convertTotal * 0.15)
-        
 
-//     }else if (couponCode === "Couple20") {
-//         setInnerText("grand-total",convertTotal - convertTotal * 0.20)
-//     } else {
-//         alert("Invalid Coupon")
-//     }
-
-// })
 
 function getValue(id) {
   const budgetInnerText = document.getElementById(id).innerText;
   const budget = parseInt(budgetInnerText);
-  return budget;
+  return budget.toFixed();
 }
 
 
 function totalPrice(id, value) {
     const totalCost = document.getElementById("total-cost").innerText;
     const total = parseInt(totalCost) + parseInt(value);
-    document.getElementById("total-cost").innerText = total;
+    document.getElementById("total-cost").innerText = total.toFixed(2);
 
 }
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
 
-// function hideElement(id) {
-//     const element = document.getElementById(id);
-//     element.classList.add('hidden')
-// }
-// hideElement()
-// function showElement(id) {
-//     const element = document.getElementById(id);
-//     element.classList.remove('hidden')
-// }
-// showElement("next")
+
 
 function hide(){
     const hideNext = document.getElementById('next')
