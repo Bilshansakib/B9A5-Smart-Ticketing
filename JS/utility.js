@@ -22,8 +22,8 @@ for (const btn of allBtn) {
 
         const seatName = event.target.parentNode.childNodes[1].innerText;
         // const seatName = event.target.parentNode.parentNode.parentNode.childNodes.childNodes[0].innerText
+        // const seatName = event.target.currentTarget.innerText;
         console.log(seatName)
-        
 
         const selectedContainer = document.getElementById(
             "selected-place-container"
@@ -37,19 +37,16 @@ for (const btn of allBtn) {
           const price = p2.innerText;
       
           li.appendChild(p);
-        //   li.appendChild(p2);
           selectedContainer.appendChild(li);
 
         const priceContainer = document.getElementById('selected-price-container');
         priceContainer.appendChild(p2);
-
-
-       totalPrice("total-cost",price);
-       event.target.parentNode.style.color = "bg-[#1dd100]";
         
-
-
-       totalPrice("grand-total", price)
+        
+       totalPrice("total-cost",price);
+       event.target.setAttribute("disabled", true);
+       setInnerText("fare",parseInt(price));
+    //    totalPrice("grand-total", price)
 
 
 
@@ -65,7 +62,8 @@ for (const btn of allBtn) {
         setInnerText("grand-total",convertTotal - convertTotal * 0.15)
         
 
-    }else if (couponCode === "Couple20") {
+    }
+    if (couponCode === "COUPLE20") {
         setInnerText("grand-total",convertTotal - convertTotal * 0.20)
     } else {
         alert("Invalid Coupon")
@@ -94,8 +92,6 @@ for (const btn of allBtn) {
 //     }
 
 // })
-
-
 
 function getValue(id) {
   const budgetInnerText = document.getElementById(id).innerText;
