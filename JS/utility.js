@@ -60,11 +60,13 @@ for (const btn of allBtn) {
     
     if (couponCode === "NEW15") {
         setInnerText("grand-total",convertTotal - convertTotal * 0.15)
+        return couponCode
         
 
     }
     if (couponCode === "COUPLE20") {
         setInnerText("grand-total",convertTotal - convertTotal * 0.20)
+        return couponCode
     } else {
         alert("Invalid Coupon")
     }
